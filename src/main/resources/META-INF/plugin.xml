@@ -1,19 +1,29 @@
 <idea-plugin>
-    <id>com.github.olivernybroe.collectionsintellij</id>
-    <name>collections-intellij</name>
-    <vendor>olivernybroe</vendor>
+    <id>dev.nybroe.collector</id>
+    <name>Collector</name>
+    <vendor email="Oliver@nybroe.dev" url="https://nybroe.dev">Oliver Nybroe</vendor>
 
     <!-- Product and plugin compatibility requirements -->
     <!-- https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.jetbrains.php</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.olivernybroe.collectionsintellij.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.olivernybroe.collectionsintellij.services.MyProjectService"/>
+        <projectService serviceImplementation="dev.nybroe.collector.services.MyProjectService"/>
+        <localInspection
+            language="PHP"
+            groupPath="PHP"
+            groupKey="collectionGroupName"
+            shortName="ForeachToCollectionInspection"
+            enabledByDefault="true"
+            bundle="messages.MyBundle"
+            key="foreachToCollectionDisplayName"
+            implementationClass="dev.nybroe.collector.inspections.ForeachToCollectionInspection"
+        />
     </extensions>
 
     <applicationListeners>
-        <listener class="com.github.olivernybroe.collectionsintellij.listeners.MyProjectManagerListener"
+        <listener class="dev.nybroe.collector.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
 </idea-plugin>

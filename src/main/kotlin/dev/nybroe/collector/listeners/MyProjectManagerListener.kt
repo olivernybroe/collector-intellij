@@ -1,11 +1,10 @@
-package com.github.olivernybroe.collectionsintellij.listeners
+package dev.nybroe.collector.listeners
 
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.project.ProjectManagerListener
-import com.github.olivernybroe.collectionsintellij.services.MyProjectService
+import dev.nybroe.collector.services.MyProjectService
 
 internal class MyProjectManagerListener : ProjectManagerListener {
-
     override fun projectOpened(project: Project) {
         project.getService(MyProjectService::class.java)
     }

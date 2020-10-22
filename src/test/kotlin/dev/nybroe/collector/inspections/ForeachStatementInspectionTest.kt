@@ -4,7 +4,6 @@ import com.intellij.testFramework.fixtures.BasePlatformTestCase
 import dev.nybroe.collector.quickFixes.ForeachToCollectionQuickFix
 import junit.framework.TestCase
 
-
 internal class ForeachStatementInspectionTest : BasePlatformTestCase() {
     override fun getTestDataPath(): String {
         return "src/test/resources/inspections/ForeachStatementInspection"

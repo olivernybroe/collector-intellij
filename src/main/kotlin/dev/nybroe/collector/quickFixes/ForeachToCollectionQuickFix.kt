@@ -53,8 +53,8 @@ class ForeachToCollectionQuickFix : LocalQuickFix {
     private fun createArguments(project: Project, foreach: ForeachStatement): ParameterList {
         return PhpPsiElementFactory.createArgumentList(
             project,
-            foreach.value!!.text
-                + if (foreach.key != null) ", ${foreach.key!!.text}" else ""
+            foreach.value!!.text +
+                if (foreach.key != null) ", ${foreach.key!!.text}" else ""
         )
     }
 

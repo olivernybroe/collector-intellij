@@ -9,7 +9,6 @@
     <depends>com.jetbrains.php</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <projectService serviceImplementation="dev.nybroe.collector.services.MyProjectService"/>
         <localInspection
             language="PHP"
             groupPath="PHP"
@@ -21,9 +20,4 @@
             implementationClass="dev.nybroe.collector.inspections.ForeachToCollectionInspection"
         />
     </extensions>
-
-    <applicationListeners>
-        <listener class="dev.nybroe.collector.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
 </idea-plugin>

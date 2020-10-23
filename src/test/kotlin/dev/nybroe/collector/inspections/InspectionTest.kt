@@ -1,13 +1,14 @@
 package dev.nybroe.collector.inspections
 
+import com.intellij.codeInspection.InspectionProfileEntry
 import com.intellij.testFramework.fixtures.BasePlatformTestCase
-import dev.nybroe.collector.quickFixes.ForeachToCollectionQuickFix
 import junit.framework.TestCase
 
-internal class ForeachStatementInspectionTest : BasePlatformTestCase() {
-    override fun getTestDataPath(): String {
-        return "src/test/resources/inspections/ForeachStatementInspection"
-    }
+internal abstract class InspectionTest : BasePlatformTestCase() {
+    protected abstract fun defaultInspection(): InspectionProfileEntry
+    protected abstract fun defaultAction(): String
+
+    protected fun doTest(testName: String) = doTest(testName, defaultInspection(), defaultAction())
 
     /**
      * Given the name of a test file, runs comparing references inspection quick fix and tests
@@ -16,30 +17,22 @@ internal class ForeachStatementInspectionTest : BasePlatformTestCase() {
      *
      * @param testName The name of the test file before comparing references inspection.
      */
-    private fun doTest(testName: String) {
+    protected fun doTest(testName: String, inspection: InspectionProfileEntry, action: String) {
         // Initialize the test based on the testData file
         myFixture.configureByFile("$testName.php")
+
         // Initialize the inspection and get a list of highlighted
-        myFixture.enableInspections(ForeachToCollectionInspection())
+        myFixture.enableInspections(inspection)
         val highlightInfos = myFixture.doHighlighting()
         TestCase.assertFalse(highlightInfos.isEmpty())
+
         // Get the quick fix action for comparing references inspection and apply it to the file
-        val action = myFixture.findSingleIntention(ForeachToCollectionQuickFix.QUICK_FIX_NAME)
-        TestCase.assertNotNull(action)
-        myFixture.launchAction(action)
+        myFixture.findSingleIntention(action).also {
+            assertNotNull(it)
+            myFixture.launchAction(it)
+        }
+
         // Verify the results
         myFixture.checkResultByFile("$testName.after.php")
-    }
-
-    fun testForeachValueOnly() {
-        doTest("foreach-value-only")
-    }
-
-    fun testForeachKeyValue() {
-        doTest("foreach-key-value")
-    }
-
-    fun testForeachOuterScopeVariable() {
-        doTest("foreach-outer-scope-variable")
     }
 }

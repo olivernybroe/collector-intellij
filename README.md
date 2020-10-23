@@ -18,6 +18,8 @@ It can also convert normal PHP statements into collections.
 <!-- Plugin description end -->
 
 ## Installation
+The plugin is still pending validation from IntelliJ! Only manual install is possible until then.
+
 
 - Using IDE built-in plugin system:
 

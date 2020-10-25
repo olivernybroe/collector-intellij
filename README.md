@@ -39,6 +39,12 @@ The plugin is still pending validation from IntelliJ! Only manual install is pos
 
   Then search for the plugin and install it as usual.
 
+## Features
+
+- `foreach` to collection
+- `array_map` to collection
+
+
 ---
 Plugin based on the [IntelliJ Platform Plugin Template][template].
 

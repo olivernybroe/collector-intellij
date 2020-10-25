@@ -19,5 +19,16 @@
             key="foreachToCollectionDisplayName"
             implementationClass="dev.nybroe.collector.inspections.ForeachToCollectionInspection"
         />
+
+        <localInspection
+            language="PHP"
+            groupPath="PHP"
+            groupKey="collectionGroupName"
+            shortName="ArrayMapToCollectionInspection"
+            enabledByDefault="true"
+            bundle="messages.MyBundle"
+            key="arrayMapToCollectionDisplayName"
+            implementationClass="dev.nybroe.collector.inspections.ArrayMapToCollectionInspection"
+        />
     </extensions>
 </idea-plugin>

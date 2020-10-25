@@ -8,7 +8,7 @@ import com.jetbrains.php.lang.psi.elements.FunctionReference
 
 class ArrayMapToCollectionQuickFix : LocalQuickFix {
     companion object {
-        const val QUICK_FIX_NAME = "Refactor array_map to collection"
+        const val QUICK_FIX_NAME = "Refactor 'array_map' to collection"
     }
 
     override fun getFamilyName(): String {
@@ -30,7 +30,7 @@ class ArrayMapToCollectionQuickFix : LocalQuickFix {
         }
 
         descriptor.psiElement.replace(
-            PhpPsiElementFactory.createStatement(
+            PhpPsiElementFactory.createMethodReference(
                 project,
                 "collect(${parameters[1].text})->map(${parameters[0].text})->all()"
             )

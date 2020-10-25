@@ -15,4 +15,12 @@ internal class ArrayMapToCollectionInspectionTest : InspectionTest() {
     fun testCallbackAndArray() {
         doTest("array_map-callback-and-array")
     }
+
+    fun testInNamespace() {
+        doTest("array_map-in-namespace")
+    }
+
+    fun testNamespacedArrayMap() {
+        doTest("array_map-in-namespace")
+    }
 }

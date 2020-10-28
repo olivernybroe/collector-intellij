@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="/art/banner.png" width="914" title="Collector Banner">
+    <img src="/art/header.png?1" alt="collector header">
     <p align="center">
         <a href="https://github.com/olivernybroe/collections-intellij/workflows"><img alt="GitHub Workflow Status (master)" src="https://github.com/olivernybroe/collections-intellij/workflows/Build/badge.svg"></a>
         <a href="https://plugins.jetbrains.com/plugin/15246"><img alt="Total Downloads" src="https://img.shields.io/jetbrains/plugin/d/15246"></a>
@@ -13,7 +13,7 @@
 <!-- Plugin description -->
 This plugin adds support for Laravel Collections.
 
-It contains a bunch of handy refactorings for making your collections better.  
+It contains a bunch of handy refactorings for making your collections better.
 It can also convert normal PHP statements into collections.
 <!-- Plugin description end -->
 
@@ -44,6 +44,12 @@ The plugin is still pending validation from IntelliJ! Only manual install is pos
 - `foreach` to collection
 - `array_map` to collection
 
+## Credits
+
+- [Oliver Nybroe](https://github.com/olivernybroe)
+- [All contributors](https://github.com/olivernybroe/collector-intellij/contributors)
+
+Special thanks to [Caneco](https://twitter.com/caneco) for the logo ✨
 
 ---
 Plugin based on the [IntelliJ Platform Plugin Template][template].

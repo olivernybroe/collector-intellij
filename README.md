@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="/art/header.png?1" alt="collector header">
+    <img src="/art/banner.png" width="914" title="Collector Banner">
     <p align="center">
         <a href="https://github.com/olivernybroe/collections-intellij/workflows"><img alt="GitHub Workflow Status (master)" src="https://github.com/olivernybroe/collections-intellij/workflows/Build/badge.svg"></a>
         <a href="https://plugins.jetbrains.com/plugin/15246"><img alt="Total Downloads" src="https://img.shields.io/jetbrains/plugin/d/15246"></a>
@@ -46,6 +46,9 @@ The plugin is still pending validation from IntelliJ! Only manual install is pos
 
 ### `array_map` to collection
 ![array_map-example](/art/usage/array_map.gif)
+
+### `map(...)->flatten(1)` to `flatMap`
+![flatmap-example](/art/usage/flatmap.gif)
 
 ## Credits
 

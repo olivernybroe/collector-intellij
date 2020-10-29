@@ -41,8 +41,11 @@ The plugin is still pending validation from IntelliJ! Only manual install is pos
 
 ## Features
 
-- `foreach` to collection
-- `array_map` to collection
+### `foreach` to collection
+![foreach-example](/art/usage/foreach.gif)
+
+### `array_map` to collection
+![array_map-example](/art/usage/array_map.gif)
 
 ## Credits
 

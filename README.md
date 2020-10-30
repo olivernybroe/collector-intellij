@@ -49,6 +49,9 @@ The plugin has no stable version, only manual and EAP is possible.
 ### `map(...)->flatten(1)` to `flatMap`
 ![flatmap-example](/art/usage/flatmap.gif)
 
+### Remove nested collections
+![recursive-collection-example](/art/usage/recursiveCollection.gif)
+
 ## Credits
 
 - [Oliver Nybroe](https://github.com/olivernybroe)

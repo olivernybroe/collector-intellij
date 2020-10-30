@@ -5,6 +5,7 @@
 ## [Unreleased]
 ### Added
 - Added `map(...)->flatten(1)` to `flatMap` refactoring ([#12](https://github.com/olivernybroe/collector-intellij/pull/12))
+- Added removing of nested collection statement in collect function call.
 
 ### Changed
 

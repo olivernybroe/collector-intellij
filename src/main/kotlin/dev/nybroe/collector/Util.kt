@@ -4,6 +4,7 @@ import com.jetbrains.php.lang.psi.elements.FunctionReference
 import com.jetbrains.php.lang.psi.elements.Method
 import com.jetbrains.php.lang.psi.elements.MethodReference
 import com.jetbrains.php.lang.psi.elements.PhpClass
+import com.jetbrains.php.lang.psi.elements.PhpReference
 
 fun FunctionReference.isGlobalFunctionCallWithName(name: String): Boolean {
     return this.name == name
@@ -20,3 +21,6 @@ fun Method.isCollectionMethod(): Boolean {
 fun MethodReference.isCollectionMethod(): Boolean {
     return (this.resolve() as? Method)?.isCollectionMethod() ?: false
 }
+
+val PhpReference.isCollectionType: Boolean
+    get() = this.type.global(this.project).types.contains("\\Illuminate\\Support\\Collection")

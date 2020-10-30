@@ -41,5 +41,16 @@
                 key="mapFlattenToFlatMapDisplayName"
                 implementationClass="dev.nybroe.collector.inspections.MapFlattenToFlatMapInspection"
         />
+
+        <localInspection
+                language="PHP"
+                groupPath="PHP"
+                groupKey="collectionGroupName"
+                shortName="CollectFunctionInCollectionInspection"
+                enabledByDefault="true"
+                bundle="messages.MyBundle"
+                key="collectFunctionInCollectionInspectionDisplayName"
+                implementationClass="dev.nybroe.collector.inspections.CollectFunctionInCollectionInspection"
+        />
     </extensions>
 </idea-plugin>

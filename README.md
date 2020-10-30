@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="/art/banner.png" width="914" title="Collector Banner">
+    <img src="/art/header.png?1" alt="collector header">
     <p align="center">
         <a href="https://github.com/olivernybroe/collections-intellij/workflows"><img alt="GitHub Workflow Status (master)" src="https://github.com/olivernybroe/collections-intellij/workflows/Build/badge.svg"></a>
         <a href="https://plugins.jetbrains.com/plugin/15246"><img alt="Total Downloads" src="https://img.shields.io/jetbrains/plugin/d/15246"></a>

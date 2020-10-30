@@ -6,7 +6,6 @@ import dev.nybroe.collector.quickFixes.ArrayMapToCollectionQuickFix
 internal class ArrayMapToCollectionInspectionTest : InspectionTest() {
     override fun defaultInspection(): InspectionProfileEntry = ArrayMapToCollectionInspection()
     override fun defaultAction(): String = ArrayMapToCollectionQuickFix.QUICK_FIX_NAME
-    override fun getTestDataPath(): String = "src/test/resources/inspections/ArrayMapToCollectionInspection"
 
     fun testCallbackAndVariable() {
         doTest("array_map-callback-and-variable")
@@ -21,6 +20,6 @@ internal class ArrayMapToCollectionInspectionTest : InspectionTest() {
     }
 
     fun testNamespacedArrayMap() {
-        doTest("array_map-in-namespace")
+        doTest("namespaced_array_map")
     }
 }

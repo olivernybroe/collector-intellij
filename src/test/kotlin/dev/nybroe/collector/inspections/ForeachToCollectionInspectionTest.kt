@@ -6,7 +6,6 @@ import dev.nybroe.collector.quickFixes.ForeachToCollectionQuickFix
 internal class ForeachToCollectionInspectionTest : InspectionTest() {
     override fun defaultInspection(): InspectionProfileEntry = ForeachToCollectionInspection()
     override fun defaultAction(): String = ForeachToCollectionQuickFix.QUICK_FIX_NAME
-    override fun getTestDataPath(): String = "src/test/resources/inspections/ForeachToCollectionInspection"
 
     fun testForeachValueOnly() {
         doTest("foreach-value-only")

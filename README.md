@@ -1,3 +1,4 @@
+<!-- Plugin description -->
 <p align="center">
     <img src="/art/header.png?1" alt="collector header">
     <p align="center">
@@ -10,12 +11,10 @@
 
 # Collector - A collection's plugin for PhpStorm
 
-<!-- Plugin description -->
 This plugin adds support for Laravel Collections.
 
 It contains a bunch of handy refactorings for making your collections better.
 It can also convert normal PHP statements into collections.
-<!-- Plugin description end -->
 
 ## Installation
 The plugin is still pending validation from IntelliJ! Only manual install is possible until then.
@@ -56,6 +55,8 @@ The plugin is still pending validation from IntelliJ! Only manual install is pos
 - [All contributors](https://github.com/olivernybroe/collector-intellij/contributors)
 
 Special thanks to [Caneco](https://twitter.com/caneco) for the logo ✨
+
+<!-- Plugin description end -->
 
 ---
 Plugin based on the [IntelliJ Platform Plugin Template][template].

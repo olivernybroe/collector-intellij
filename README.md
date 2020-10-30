@@ -17,10 +17,10 @@ It contains a bunch of handy refactorings for making your collections better.
 It can also convert normal PHP statements into collections.
 
 ## Installation
-The plugin is still pending validation from IntelliJ! Only manual install is possible until then.
+The plugin has no stable version, only manual and EAP is possible.
 
 
-- Using IDE built-in plugin system:
+- ~~Using IDE built-in plugin system~~: (no stable release yet)
 
   <kbd>Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "Collector"</kbd> >
   <kbd>Install Plugin</kbd>

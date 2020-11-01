@@ -1,8 +1,8 @@
 <!-- Plugin description -->
 <p align="center">
-    <img src="/art/header.png?1" alt="collector header">
+    <img src="https://github.com/olivernybroe/collector-intellij/blob/main/art/header.png?1" alt="collector header">
     <p align="center">
-        <a href="https://github.com/olivernybroe/collections-intellij/workflows"><img alt="GitHub Workflow Status (master)" src="https://github.com/olivernybroe/collections-intellij/workflows/Build/badge.svg"></a>
+        <a href="https://github.com/olivernybroe/collections-intellij"><img alt="GitHub Workflow Status (master)" src="https://github.com/olivernybroe/collections-intellij/workflows/Build/badge.svg"></a>
         <a href="https://plugins.jetbrains.com/plugin/15246"><img alt="Total Downloads" src="https://img.shields.io/jetbrains/plugin/d/15246"></a>
         <a href="https://plugins.jetbrains.com/plugin/15246"><img alt="Latest Version" src="https://img.shields.io/jetbrains/plugin/v/15246"></a>
 	    <a href="https://plugins.jetbrains.com/plugin/15246"><img alt="Latest EAP Version" src="https://img.shields.io/badge/dynamic/xml?label=EAP version&query=%2Fplugin-repository%2Fcategory%2Fidea-plugin%5B1%5D%2Fversion&url=https%3A%2F%2Fplugins.jetbrains.com%2Fplugins%2Flist%3Fchannel%3Deap%26pluginId%3D15246"></a>
@@ -38,19 +38,27 @@ The plugin has no stable version, only manual and EAP is possible.
 
   Then search for the plugin and install it as usual.
 
+## Configuration
+> :warning: The inspections might be disabled by default! Go to settings for enabling them.
+
+All the features are added as inspections in PhpStorm, this means you can disable
+the ones you like or change how severe the warning are on them.
+
+![inspection-settings](https://github.com/olivernybroe/collector-intellij/blob/main/art/usage/inspection.jpg)
+
 ## Features
 
 ### `foreach` to collection
-![foreach-example](/art/usage/foreach.gif)
+![foreach-example](https://github.com/olivernybroe/collector-intellij/blob/main/art/usage/foreach.gif)
 
 ### `array_map` to collection
-![array_map-example](/art/usage/array_map.gif)
+![array_map-example](https://github.com/olivernybroe/collector-intellij/blob/main/art/usage/array_map.gif)
 
 ### `map(...)->flatten(1)` to `flatMap`
-![flatmap-example](/art/usage/flatmap.gif)
+![flatmap-example](https://github.com/olivernybroe/collector-intellij/blob/main/art/usage/flatmap.gif)
 
 ### Remove nested collections
-![recursive-collection-example](/art/usage/recursiveCollection.gif)
+![recursive-collection-example](https://github.com/olivernybroe/collector-intellij/blob/main/art/usage/recursiveCollection.gif)
 
 ## Credits
 

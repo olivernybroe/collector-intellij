@@ -39,10 +39,13 @@ The plugin has no stable version, only manual and EAP is possible.
   Then search for the plugin and install it as usual.
 
 ## Configuration
-> :warning: The inspections might be disabled by default! Go to settings for enabling them.
+> :warning: The inspections might be disabled by default! Go to preferences for enabling them.
 
 All the features are added as inspections in PhpStorm, this means you can disable
-the ones you like or change how severe the warning are on them.
+the ones you don't like or change how severe the warning are on them.  
+
+For example, by default refactoring `foreach` to collection is not highlighting the text.  
+However, if you would like to enforce yourself to never use `foreach`, you can change the severity to error.
 
 ![inspection-settings](https://github.com/olivernybroe/collector-intellij/blob/main/art/usage/inspection.jpg)
 

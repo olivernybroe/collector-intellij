@@ -22,4 +22,8 @@ internal class ForeachToCollectionInspectionTest : InspectionTest() {
     fun testForeachKeyValueMultiStatement() {
         doTest("foreach-key-value-multi-statement")
     }
+
+    fun testForeachOuterScopeThisVariable() {
+        doTest("foreach-outer-scope-this-variable")
+    }
 }

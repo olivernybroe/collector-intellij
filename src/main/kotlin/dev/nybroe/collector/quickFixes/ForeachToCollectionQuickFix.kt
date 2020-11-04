@@ -41,6 +41,7 @@ class ForeachToCollectionQuickFix : LocalQuickFix {
             arrayOf(
                 foreach.key?.name,
                 foreach.value?.name,
+                "this",
                 if (foreach.array is PhpNamedElement) (foreach.array as PhpNamedElement).name else null
             ).asSequence().filterNotNull().toList()
         ) ?: ""

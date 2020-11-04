@@ -5,6 +5,7 @@
 ## [Unreleased]
 ### Fixed
 - Fixed refactoring foreach to collection with multiline
+- Fixed refactoring foreach to collection with this variable
 
 ## [0.0.1-EAP.4]
 ### Added

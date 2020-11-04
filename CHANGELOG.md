@@ -3,6 +3,18 @@
 # collections-intellij Changelog
 
 ## [Unreleased]
+### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+## [0.0.1-EAP.5]
 ### Fixed
 - Fixed refactoring foreach to collection with multiline
 - Fixed refactoring foreach to collection with this variable

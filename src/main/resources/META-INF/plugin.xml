@@ -52,5 +52,16 @@
                 key="collectFunctionInCollectionInspectionDisplayName"
                 implementationClass="dev.nybroe.collector.inspections.CollectFunctionInCollectionInspection"
         />
+
+        <localInspection
+                language="PHP"
+                groupPath="PHP"
+                groupKey="collectionGroupName"
+                shortName="ClosureToArrowFunctionInspection"
+                enabledByDefault="true"
+                bundle="messages.MyBundle"
+                key="closureToArrowFunctionDisplayName"
+                implementationClass="dev.nybroe.collector.inspections.ClosureToArrowFunctionInspection"
+        />
     </extensions>
 </idea-plugin>

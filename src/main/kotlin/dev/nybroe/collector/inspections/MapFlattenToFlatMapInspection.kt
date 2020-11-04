@@ -17,7 +17,7 @@ class MapFlattenToFlatMapInspection : PhpInspection() {
         return object : PhpElementVisitor() {
             override fun visitPhpMethodReference(reference: MethodReference) {
                 // Check that method reference is collection method.
-                if (!reference.isCollectionMethod()) {
+                if (!reference.isCollectionMethod) {
                     return
                 }
 

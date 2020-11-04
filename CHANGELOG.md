@@ -3,17 +3,9 @@
 # collections-intellij Changelog
 
 ## [Unreleased]
-### Added
-
-### Changed
-
-### Deprecated
-
-### Removed
-
 ### Fixed
+- Fixed refactoring foreach to collection with multiline
 
-### Security
 ## [0.0.1-EAP.4]
 ### Added
 - Added `map(...)->flatten(1)` to `flatMap` refactoring ([#12](https://github.com/olivernybroe/collector-intellij/pull/12))

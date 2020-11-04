@@ -4,11 +4,12 @@ import com.intellij.codeInspection.LocalQuickFix
 import com.intellij.codeInspection.ProblemDescriptor
 import com.intellij.openapi.project.Project
 import com.intellij.psi.util.PsiTreeUtil
-import com.jetbrains.php.lang.inspections.codeStyle.PhpLoopCanBeConvertedToArrayMapInspection
 import com.jetbrains.php.lang.psi.PhpPsiElementFactory
 import com.jetbrains.php.lang.psi.elements.ForeachStatement
+import com.jetbrains.php.lang.psi.elements.GroupStatement
 import com.jetbrains.php.lang.psi.elements.ParameterList
 import com.jetbrains.php.lang.psi.elements.PhpNamedElement
+import com.jetbrains.php.lang.psi.elements.Statement
 import com.jetbrains.php.lang.psi.elements.Variable
 
 class ForeachToCollectionQuickFix : LocalQuickFix {
@@ -27,7 +28,11 @@ class ForeachToCollectionQuickFix : LocalQuickFix {
             return
         }
 
-        val statement = PhpLoopCanBeConvertedToArrayMapInspection.unwrapStatement(foreach.statement)!!
+        val statementText = when (val statement = foreach.statement) {
+            is GroupStatement -> statement.statements.joinToString("\n") { it.text }
+            is Statement -> statement.text
+            else -> return
+        }
 
         val arguments = createArguments(project, foreach)
 
@@ -42,7 +47,7 @@ class ForeachToCollectionQuickFix : LocalQuickFix {
 
         val psiCollectionCall = PhpPsiElementFactory.createStatement(
             project,
-            "collect(${foreach.array!!.text})->each(function(${arguments.text}) $useList {${statement.text}});"
+            "collect(${foreach.array!!.text})->each(function(${arguments.text}) $useList {$statementText});"
         )
 
         descriptor.psiElement.replace(

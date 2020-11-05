@@ -17,14 +17,20 @@ class MapFlattenToFlatMapQuickFix : LocalQuickFix {
 
     override fun applyFix(project: Project, descriptor: ProblemDescriptor) {
         val flattenMethodReference = descriptor.psiElement as? MethodReference ?: return
+        val mapMethodReference = flattenMethodReference.firstChild as? MethodReference ?: return
 
-        flattenMethodReference.firstChild.firstChild.nextSibling.nextSibling.replace(
+        val methodNameNode = mapMethodReference.nameNode ?: return
+
+        // Replace the method name from map -> flatMap.
+        mapMethodReference.node.replaceChild(
+            methodNameNode,
             CollectionPsiFactory.createIdentifier(
                 project,
                 "flatMap"
-            )
+            ).node
         )
 
+        // Remove flatten method.
         descriptor.psiElement.replace(flattenMethodReference.firstChild)
     }
 }

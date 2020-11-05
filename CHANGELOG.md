@@ -3,6 +3,18 @@
 # collections-intellij Changelog
 
 ## [Unreleased]
+### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+## [0.0.1-EAP.6]
 ### Fixed
 - Fixed foreach refactoring. `use` statement missing array variable when used in foreach.
 - Fixed foreach refactoring. `use` statement having duplicate variable, if used twice.

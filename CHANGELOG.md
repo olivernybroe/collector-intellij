@@ -15,6 +15,7 @@
 - Fixed foreach refactoring. `use` statement missing array variable when used in foreach.
 - Fixed foreach refactoring. `use` statement having duplicate variable, if used twice.
 - Fixed foreach refactoring. `use` statement containing array variable when using property accessor.
+- Fixed `map->flatten` to `flatMap` when it contains indentations.
 
 ## [0.0.1-EAP.5]
 ### Fixed

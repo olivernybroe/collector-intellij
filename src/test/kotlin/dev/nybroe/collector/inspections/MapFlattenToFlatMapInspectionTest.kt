@@ -22,4 +22,8 @@ internal class MapFlattenToFlatMapInspectionTest : InspectionTest() {
     fun testMapFlattenDepthInfinite() {
         doNotMatchTest("map_flatten_depth_infinite")
     }
+
+    fun testMapFlattenWithIndentation() {
+        doTest("map_flatten-to-flatmap-with-indentation")
+    }
 }

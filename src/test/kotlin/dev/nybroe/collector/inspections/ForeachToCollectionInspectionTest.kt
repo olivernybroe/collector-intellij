@@ -26,4 +26,16 @@ internal class ForeachToCollectionInspectionTest : InspectionTest() {
     fun testForeachOuterScopeThisVariable() {
         doTest("foreach-outer-scope-this-variable")
     }
+
+    fun testForeachUsingForeachArrayVariable() {
+        doTest("foreach-using-foreach-array-variable")
+    }
+
+    fun testForeachOuterScopeVariableUsedTwice() {
+        doTest("foreach-outer-scope-variable-used-twice")
+    }
+
+    fun testForeachArrayVariableUsingPropertyAccessor() {
+        doTest("foreach-array-variable-using-property-accessor")
+    }
 }

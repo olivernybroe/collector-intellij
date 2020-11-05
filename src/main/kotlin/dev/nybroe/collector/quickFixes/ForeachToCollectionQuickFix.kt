@@ -8,7 +8,6 @@ import com.jetbrains.php.lang.psi.PhpPsiElementFactory
 import com.jetbrains.php.lang.psi.elements.ForeachStatement
 import com.jetbrains.php.lang.psi.elements.GroupStatement
 import com.jetbrains.php.lang.psi.elements.ParameterList
-import com.jetbrains.php.lang.psi.elements.PhpNamedElement
 import com.jetbrains.php.lang.psi.elements.Statement
 import com.jetbrains.php.lang.psi.elements.Variable
 
@@ -38,11 +37,10 @@ class ForeachToCollectionQuickFix : LocalQuickFix {
 
         val useList = createUseListStatement(
             foreach,
-            arrayOf(
+            listOf(
                 foreach.key?.name,
                 foreach.value?.name,
-                "this",
-                if (foreach.array is PhpNamedElement) (foreach.array as PhpNamedElement).name else null
+                "this"
             ).asSequence().filterNotNull().toList()
         ) ?: ""
 
@@ -65,10 +63,11 @@ class ForeachToCollectionQuickFix : LocalQuickFix {
     }
 
     private fun createUseListStatement(foreach: ForeachStatement, ignoredNames: List<String>): String? {
-        return PsiTreeUtil.collectElementsOfType(foreach, Variable::class.java)
+        return PsiTreeUtil.collectElementsOfType(foreach.statement, Variable::class.java)
             .map { it.name }
             .filter { !ignoredNames.contains(it) }
             .ifEmpty { return null }
+            .distinct()
             .joinToString(separator = ", ") { "$$it" }
             .let { "use ($it)" }
     }

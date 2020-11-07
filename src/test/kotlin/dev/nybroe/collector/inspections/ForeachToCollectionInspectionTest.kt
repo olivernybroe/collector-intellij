@@ -38,4 +38,16 @@ internal class ForeachToCollectionInspectionTest : InspectionTest() {
     fun testForeachArrayVariableUsingPropertyAccessor() {
         doTest("foreach-array-variable-using-property-accessor")
     }
+
+    fun testForeachStringInterpolation() {
+        doTest("foreach-string-interpolation")
+    }
+
+    fun testForeachStringInterpolationWithoutBraces() {
+        doTest("foreach-string-interpolation-without-braces")
+    }
+
+    fun testForeachStringInterpolationWithPropertyAccess() {
+        doTest("foreach-string-interpolation-with-property-access")
+    }
 }

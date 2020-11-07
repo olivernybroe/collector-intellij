@@ -65,9 +65,15 @@ class ForeachToCollectionQuickFix : LocalQuickFix {
     private fun createUseListStatement(foreach: ForeachStatement, ignoredNames: List<String>): String? {
         return PsiTreeUtil.collectElementsOfType(foreach.statement, Variable::class.java)
             .map { it.name }
+            // Filter empty variables. (happens with expressions in string interpolation)
+            .filter { it.isNotBlank() }
+            // Filter all ignored names.
             .filter { !ignoredNames.contains(it) }
+            // Early return if we have no variables left.
             .ifEmpty { return null }
+            // Remove all duplicates
             .distinct()
+            // Convert it to a use statement string.
             .joinToString(separator = ", ") { "$$it" }
             .let { "use ($it)" }
     }

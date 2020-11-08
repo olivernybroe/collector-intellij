@@ -63,7 +63,7 @@ However, if you would like to enforce yourself to never use `foreach`, you can c
 ### Remove nested collections
 ![recursive-collection-example](https://github.com/olivernybroe/collector-intellij/blob/main/art/usage/recursiveCollection.gif)
 
-## Closure to arrow functions
+### Closure to arrow functions
 ![closure-to-arrow-example](https://github.com/olivernybroe/collector-intellij/blob/main/art/usage/closureToArrow.gif)
 
 

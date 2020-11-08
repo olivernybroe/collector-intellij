@@ -4,17 +4,11 @@
 
 ## [Unreleased]
 ### Added
-
-### Changed
-
-### Deprecated
-
-### Removed
+- Added closure to arrow function inside collection
 
 ### Fixed
 - Fixed foreach refactoring. `use` statement contains empty variable when expression inside string interpolation.
 
-### Security
 ## [0.0.1-EAP.6]
 ### Fixed
 - Fixed foreach refactoring. `use` statement missing array variable when used in foreach.

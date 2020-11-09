@@ -1,0 +1,8 @@
+<idea-plugin>
+    <extensions defaultExtensionNs="com.intellij">
+        <lang.inspectionSuppressor
+            language="Blade"
+            implementationClass="dev.nybroe.collector.blade.BladePhpInspectionSuppressor"
+        />
+    </extensions>
+</idea-plugin>

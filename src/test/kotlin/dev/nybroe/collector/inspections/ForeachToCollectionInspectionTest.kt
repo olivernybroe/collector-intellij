@@ -50,4 +50,8 @@ internal class ForeachToCollectionInspectionTest : InspectionTest() {
     fun testForeachStringInterpolationWithPropertyAccess() {
         doTest("foreach-string-interpolation-with-property-access")
     }
+
+    fun testForeachBladeDirectives() {
+        doNotMatchTest("foreach-blade-directive.blade")
+    }
 }

@@ -3,6 +3,10 @@
 # collections-intellij Changelog
 
 ## [Unreleased]
+### Fixed
+- Ignore foreach to collection in blade files
+
+## [0.0.1-EAP.7]
 ### Added
 - Added closure to arrow function inside collection
 

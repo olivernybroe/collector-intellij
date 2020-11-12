@@ -4,6 +4,18 @@
 
 ## [Unreleased]
 ### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+## [0.0.1-EAP.9]
+### Added
 - Added notification for enabling inspections if disabled
 
 ### Changed

@@ -63,5 +63,14 @@
                 key="closureToArrowFunctionDisplayName"
                 implementationClass="dev.nybroe.collector.inspections.ClosureToArrowFunctionInspection"
         />
+
+        <projectService serviceImplementation="dev.nybroe.collector.services.ChecksInspectionsEnabledService"/>
+        <projectService serviceInterface="dev.nybroe.collector.inspections.test"
+                        serviceImplementation="dev.nybroe.collector.inspections.impl.testImpl"/>
     </extensions>
+
+    <applicationListeners>
+        <listener class="dev.nybroe.collector.listeners.ChecksInspectionsEnabledProjectManagerListener"
+                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
+    </applicationListeners>
 </idea-plugin>

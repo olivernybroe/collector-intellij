@@ -4,6 +4,7 @@
 
 ## [Unreleased]
 ### Added
+- Added notification for enabling inspections if disabled
 
 ### Changed
 
@@ -13,7 +14,6 @@
 
 ### Fixed
 
-### Security
 ## [0.0.1-EAP.8]
 ### Fixed
 - Ignore foreach to collection in blade files

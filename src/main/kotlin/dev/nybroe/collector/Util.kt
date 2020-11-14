@@ -13,8 +13,13 @@ fun FunctionReference.isGlobalFunctionCallWithName(name: String): Boolean {
     return this.name == name
 }
 
+private val collectionClasses = listOf(
+    "\\Illuminate\\Support\\Collection",
+    "\\Illuminate\\Support\\Traits\\EnumeratesValues",
+)
+
 val PhpClass.isCollectionClass: Boolean
-    get() = this.fqn == "\\Illuminate\\Support\\Collection"
+    get() = collectionClasses.contains(this.fqn)
 
 val Method.isCollectionMethod: Boolean
     get() = this.containingClass?.isCollectionClass ?: false

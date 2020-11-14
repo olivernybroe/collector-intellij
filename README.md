@@ -66,6 +66,8 @@ However, if you would like to enforce yourself to never use `foreach`, you can c
 ### Closure to arrow functions
 ![closure-to-arrow-example](https://github.com/olivernybroe/collector-intellij/blob/main/art/usage/closureToArrow.gif?raw=1)
 
+### `where(...)->first()` to `firstWhere`
+![where-first-to-firstWhere-example](https://github.com/olivernybroe/collector-intellij/blob/main/art/usage/where-first-to-firstWhere.gif?raw=1)
 
 ## Credits
 

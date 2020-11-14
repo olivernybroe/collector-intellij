@@ -47,6 +47,41 @@ namespace Illuminate\Support {
         public function sum() {
 
         }
+
+        /**
+         * Get the first item by the given key value pair.
+         *
+         * @param  string  $key
+         * @param  mixed  $operator
+         * @param  mixed  $value
+         * @return mixed
+         */
+        public function firstWhere($key, $operator, $value = null)
+        {
+        }
+
+        /**
+         * Get the first item from the collection.
+         *
+         * @param  callable|null  $callback
+         * @param  mixed  $default
+         * @return mixed
+         */
+        public function first(callable $callback = null, $default = null)
+        {
+        }
+
+        /**
+         * Filter items by the given key value pair.
+         *
+         * @param  string  $key
+         * @param  mixed  $operator
+         * @param  mixed  $value
+         * @return static
+         */
+        public function where($key, $operator, $value = null)
+        {
+        }
     }
 }
 

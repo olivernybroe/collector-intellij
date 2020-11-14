@@ -64,9 +64,18 @@
                 implementationClass="dev.nybroe.collector.inspections.ClosureToArrowFunctionInspection"
         />
 
+        <localInspection
+                language="PHP"
+                groupPath="PHP"
+                groupKey="collectionGroupName"
+                shortName="WhereFirstInspection"
+                enabledByDefault="true"
+                bundle="messages.MyBundle"
+                key="whereFirstDisplayName"
+                implementationClass="dev.nybroe.collector.inspections.WhereFirstInspection"
+        />
+
         <projectService serviceImplementation="dev.nybroe.collector.services.ChecksInspectionsEnabledService"/>
-        <projectService serviceInterface="dev.nybroe.collector.inspections.test"
-                        serviceImplementation="dev.nybroe.collector.inspections.impl.testImpl"/>
     </extensions>
 
     <applicationListeners>

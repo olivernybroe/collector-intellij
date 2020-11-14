@@ -4,6 +4,18 @@
 
 ## [Unreleased]
 ### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+## [0.0.1-EAP.10]
+### Added
 - Added `where(...)->first()` to `firstWhere` refactoring ([#31](https://github.com/olivernybroe/collector-intellij/pull/31))
 
 ## [0.0.1-EAP.9]

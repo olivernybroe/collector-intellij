@@ -29,12 +29,6 @@ val Method.isCollectionMethod: Boolean
 val MethodReference.isCollectionMethod: Boolean
     get() = (this.resolve() as? Method)?.isCollectionMethod ?: false
 
-val Function.returnsCollection: Boolean
-    get() = this.type.global(this.project).isCollection(this.project)
-
-val FunctionReference.returnsCollection: Boolean
-    get() = (this.resolve() as? Function)?.returnsCollection ?: false
-
 val PhpReference.isCollectionType: Boolean
     get() = this.type.global(this.project).isCollection(this.project)
 

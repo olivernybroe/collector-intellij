@@ -10,15 +10,15 @@ import com.jetbrains.php.lang.inspections.PhpInspection
 import com.jetbrains.php.lang.lexer.PhpTokenTypes
 import com.jetbrains.php.lang.psi.PhpPsiUtil
 import com.jetbrains.php.lang.psi.elements.Function
-import com.jetbrains.php.lang.psi.elements.FunctionReference
 import com.jetbrains.php.lang.psi.elements.GroupStatement
+import com.jetbrains.php.lang.psi.elements.MethodReference
 import com.jetbrains.php.lang.psi.elements.ParameterList
 import com.jetbrains.php.lang.psi.elements.PhpUseList
 import com.jetbrains.php.lang.psi.visitors.PhpElementVisitor
 import dev.nybroe.collector.MyBundle
+import dev.nybroe.collector.isCollectionMethod
 import dev.nybroe.collector.isShortArrowFunction
 import dev.nybroe.collector.quickFixes.ClosureToArrowFunctionQuickFix
-import dev.nybroe.collector.returnsCollection
 
 class ClosureToArrowFunctionInspection : PhpInspection() {
     override fun buildVisitor(holder: ProblemsHolder, isOnTheFly: Boolean): PsiElementVisitor {
@@ -46,10 +46,10 @@ class ClosureToArrowFunctionInspection : PhpInspection() {
 
                 // And closure is inside a collection.
                 val methodReference = PhpPsiUtil
-                    .getParentByCondition<ParameterList>(closure, ParameterList.INSTANCEOF)?.parent ?: return
-                val functionReference = PhpPsiUtil
-                    .getChildByCondition<FunctionReference>(methodReference, FunctionReference.INSTANCEOF) ?: return
-                if (!functionReference.returnsCollection) {
+                    .getParentByCondition<ParameterList>(closure, ParameterList.INSTANCEOF)
+                    ?.parent as? MethodReference ?: return
+
+                if (!methodReference.isCollectionMethod) {
                     return
                 }
 

@@ -3,15 +3,16 @@
 # collections-intellij Changelog
 
 ## [Unreleased]
-### Added	
+### Added
 
 ### Changed
 
-### Deprecated	
+### Deprecated
 
-### Removed	
+### Removed
 
-### Fixed	
+### Fixed
+- Fixed closure to arrow function not working on collections variables
 
 ### Security
 

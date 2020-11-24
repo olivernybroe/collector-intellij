@@ -43,4 +43,9 @@ internal class ClosureToArrowFunctionInspectionTest : InspectionTest() {
         PhpProjectConfigurationFacade.getInstance(project).languageLevel = PhpLanguageLevel.PHP740
         doNotMatchTest("function-call-to-arrow-function-not-in-collection")
     }
+
+    fun testEachFunctionCallToArrowFromVariable() {
+        PhpProjectConfigurationFacade.getInstance(project).languageLevel = PhpLanguageLevel.PHP740
+        doTest("each-function-call-to-arrow-function-from-variable")
+    }
 }

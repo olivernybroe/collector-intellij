@@ -3,6 +3,15 @@
 namespace Illuminate\Support {
     class Collection {
         /**
+         * Create a new collection.
+         *
+         * @param  mixed  $items
+         */
+        public function __construct($items = [])
+        {
+        }
+
+        /**
          * @return Collection
          */
         public function map($arg) {
@@ -84,6 +93,13 @@ namespace Illuminate\Support {
         }
     }
 }
+
+namespace Illuminate\Database\Eloquent {
+    class Collection extends \Illuminate\Support\Collection {
+
+    }
+}
+
 
 /**
  * @param $array

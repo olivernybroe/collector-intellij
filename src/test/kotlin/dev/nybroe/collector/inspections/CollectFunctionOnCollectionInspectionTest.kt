@@ -13,4 +13,8 @@ internal class CollectFunctionOnCollectionInspectionTest : InspectionTest() {
     fun testCollectInCollect() {
         doTest("collect_in_collect")
     }
+
+    fun testCollectOnEloquentCollectVariable() {
+        doTest("collect_on_eloquent_collect_variable")
+    }
 }

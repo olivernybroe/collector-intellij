@@ -12,6 +12,18 @@
 ### Removed
 
 ### Fixed
+
+### Security
+## [0.0.1-EAP.12]
+### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
 - Fixed closure to arrow function not working on collections variables
 
 ### Security

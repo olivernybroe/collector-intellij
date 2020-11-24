@@ -2,6 +2,19 @@
 
 # collections-intellij Changelog
 
+## [Unreleased]
+### Added	
+
+### Changed
+
+### Deprecated	
+
+### Removed	
+
+### Fixed	
+
+### Security
+
 ## [0.0.1-EAP.11]
 ### Changed
 - Redefine how we determine if a call is a collection call

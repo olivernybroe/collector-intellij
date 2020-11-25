@@ -12,6 +12,18 @@
 ### Removed
 
 ### Fixed
+
+### Security
+## [0.0.1-EAP.13]
+### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
 - Fixed type detection recognizing `mixed` as a collection.
 
 ### Security

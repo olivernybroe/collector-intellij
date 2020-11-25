@@ -12,6 +12,7 @@
 ### Removed
 
 ### Fixed
+- Fixed type detection recognizing `mixed` as a collection.
 
 ### Security
 

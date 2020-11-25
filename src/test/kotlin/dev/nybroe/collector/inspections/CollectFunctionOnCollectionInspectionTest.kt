@@ -17,4 +17,8 @@ internal class CollectFunctionOnCollectionInspectionTest : InspectionTest() {
     fun testCollectOnEloquentCollectVariable() {
         doTest("collect_on_eloquent_collect_variable")
     }
+
+    fun testCollectOnMixedVariable() {
+        doNotMatchTest("collect_on_mixed_variable")
+    }
 }

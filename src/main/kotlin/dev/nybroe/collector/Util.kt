@@ -36,5 +36,14 @@ val Function.isShortArrowFunction: Boolean
     get() = FunctionImpl.isShortArrowFunction(this)
 
 fun PhpType.isCollection(project: Project): Boolean {
-    return collectionType.isConvertibleFrom(this, PhpIndex.getInstance(project))
+    val filteredType = this.filterMixed()
+
+    if (filteredType.isEmpty) {
+        return false
+    }
+
+    return collectionType.isConvertibleFrom(
+        filteredType,
+        PhpIndex.getInstance(project)
+    )
 }

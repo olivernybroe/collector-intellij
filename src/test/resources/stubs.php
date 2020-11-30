@@ -1,6 +1,12 @@
 <?php
 
 namespace Illuminate\Support {
+    /**
+     * Class Collection
+     *
+     * @package Illuminate\Support
+     * @property-read HigherOrderCollectionProxy $map
+     */
     class Collection {
         /**
          * Create a new collection.
@@ -91,6 +97,13 @@ namespace Illuminate\Support {
         public function where($key, $operator, $value = null)
         {
         }
+    }
+
+    /**
+     * @mixin \Illuminate\Support\Enumerable
+     */
+    class HigherOrderCollectionProxy
+    {
     }
 }
 

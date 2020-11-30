@@ -19,8 +19,12 @@ private val collectionClasses = listOf(
     "\\Illuminate\\Support\\Traits\\EnumeratesValues",
 )
 
-private val collectionType = PhpType().apply {
+val collectionType = PhpType().apply {
     collectionClasses.forEach { this.add(it) }
+}
+
+private val higherOrderCollectionType = PhpType().apply {
+    this.add("\\Illuminate\\Support\\HigherOrderCollectionProxy")
 }
 
 val Method.isCollectionMethod: Boolean
@@ -43,6 +47,19 @@ fun PhpType.isCollection(project: Project): Boolean {
     }
 
     return collectionType.isConvertibleFrom(
+        filteredType,
+        PhpIndex.getInstance(project)
+    )
+}
+
+fun PhpType.isHigherOrderCollection(project: Project): Boolean {
+    val filteredType = this.filterMixed()
+
+    if (filteredType.isEmpty) {
+        return false
+    }
+
+    return higherOrderCollectionType.isConvertibleFrom(
         filteredType,
         PhpIndex.getInstance(project)
     )

@@ -1,18 +1,11 @@
 package dev.nybroe.collector.inspections
 
 import com.intellij.codeInspection.InspectionProfileEntry
-import com.intellij.testFramework.fixtures.BasePlatformTestCase
+import dev.nybroe.collector.BaseCollectTestCase
 
-internal abstract class InspectionTest : BasePlatformTestCase() {
+internal abstract class InspectionTest : BaseCollectTestCase() {
     protected abstract fun defaultInspection(): InspectionProfileEntry
     protected abstract fun defaultAction(): String
-
-    override fun getTestDataPath(): String = "src/test/resources"
-
-    override fun setUp() {
-        super.setUp()
-        myFixture.copyFileToProject("stubs.php")
-    }
 
     private fun defaultInspectionPath(): String {
         return "inspections/${defaultInspection()::class.simpleName}"

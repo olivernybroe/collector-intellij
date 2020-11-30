@@ -78,6 +78,10 @@
         <projectService serviceImplementation="dev.nybroe.collector.services.ChecksInspectionsEnabledService"/>
     </extensions>
 
+    <extensions defaultExtensionNs="com.jetbrains.php">
+        <typeProvider4 implementation="dev.nybroe.collector.types.HigherOrderTypeProvider"/>
+    </extensions>
+
     <applicationListeners>
         <listener class="dev.nybroe.collector.listeners.ChecksInspectionsEnabledProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>

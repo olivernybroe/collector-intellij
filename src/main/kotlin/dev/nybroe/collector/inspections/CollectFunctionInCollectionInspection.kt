@@ -8,7 +8,7 @@ import com.jetbrains.php.lang.psi.elements.FunctionReference
 import com.jetbrains.php.lang.psi.elements.PhpReference
 import com.jetbrains.php.lang.psi.visitors.PhpElementVisitor
 import dev.nybroe.collector.MyBundle
-import dev.nybroe.collector.isCollectionType
+import dev.nybroe.collector.isCollectionTypeStrict
 import dev.nybroe.collector.isGlobalFunctionCallWithName
 import dev.nybroe.collector.quickFixes.NestedCollectionQuickFix
 
@@ -26,7 +26,7 @@ class CollectFunctionInCollectionInspection : PhpInspection() {
                     return
                 }
 
-                if ((reference.parameters[0].reference as? PhpReference)?.isCollectionType != true) {
+                if ((reference.parameters[0].reference as? PhpReference)?.isCollectionTypeStrict != true) {
                     return
                 }
 

@@ -36,6 +36,9 @@ val MethodReference.isCollectionMethod: Boolean
 val PhpReference.isCollectionType: Boolean
     get() = this.type.global(this.project).isCollection(this.project)
 
+val PhpReference.isCollectionTypeStrict: Boolean
+    get() = this.type.global(this.project).isCollectionStrict(this.project)
+
 val Function.isShortArrowFunction: Boolean
     get() = FunctionImpl.isShortArrowFunction(this)
 
@@ -50,6 +53,10 @@ fun PhpType.isCollection(project: Project): Boolean {
         filteredType,
         PhpIndex.getInstance(project)
     )
+}
+
+fun PhpType.isCollectionStrict(project: Project): Boolean {
+    return this.types.all { PhpType().add(it).isCollection(project) }
 }
 
 fun PhpType.isHigherOrderCollection(project: Project): Boolean {

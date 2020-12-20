@@ -43,6 +43,6 @@ internal abstract class InspectionTest : BaseCollectTestCase() {
         myFixture.enableInspections(inspection)
         myFixture.testHighlighting(true, false, true, file.virtualFile)
 
-        myFixture.getAllQuickFixes().forEach { myFixture.launchAction(it) }
+        assertEmpty(myFixture.getAllQuickFixes())
     }
 }

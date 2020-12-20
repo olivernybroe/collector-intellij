@@ -21,4 +21,12 @@ internal class CollectFunctionOnCollectionInspectionTest : InspectionTest() {
     fun testCollectOnMixedVariable() {
         doNotMatchTest("collect_on_mixed_variable")
     }
+
+    fun testCollectOnIterableVariable() {
+        doNotMatchTest("collect_on_iterable_variable")
+    }
+
+    fun testCollectOnUnionCollectoinType() {
+        doNotMatchTest("collect_on_union_collection_type")
+    }
 }

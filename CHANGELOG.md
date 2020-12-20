@@ -13,6 +13,7 @@
 ### Removed
 
 ### Fixed
+- Fixed collect on collection matching non strictly.
 
 ### Security
 ## [0.1.0]

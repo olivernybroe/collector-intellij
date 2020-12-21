@@ -4,18 +4,6 @@
 
 ## [Unreleased]
 ### Added
-
-### Changed
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
-## [0.2.0.EAP.2]
-### Added
 - Type provider for higher order collection methods and properties
 
 ### Changed

@@ -8,7 +8,6 @@ import com.intellij.psi.util.elementType
 import com.jetbrains.php.config.PhpLanguageFeature
 import com.jetbrains.php.lang.inspections.PhpInspection
 import com.jetbrains.php.lang.lexer.PhpTokenTypes
-import com.jetbrains.php.lang.parser.parsing.statements.IfStatement
 import com.jetbrains.php.lang.psi.PhpPsiUtil
 import com.jetbrains.php.lang.psi.elements.Function
 import com.jetbrains.php.lang.psi.elements.GroupStatement

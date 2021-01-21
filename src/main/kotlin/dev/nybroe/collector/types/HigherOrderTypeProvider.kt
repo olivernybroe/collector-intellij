@@ -53,15 +53,21 @@ class HigherOrderTypeProvider : PhpTypeProvider4 {
         project: Project
     ): MutableCollection<out PhpNamedElement>? {
         // Decode the expression into a php type
-        val type = PhpIndex.getInstance(project).completeType(
-            project,
-            PhpType().apply {
-                expression.split('|').filter { it.length != 1 }.forEach { it ->
-                    this.add(it)
-                }
-            },
+        val type = try {
+            PhpIndex.getInstance(project).completeType(
+                project,
+                PhpType().apply {
+                    expression.split('|').filter { it.length != 1 }.forEach {
+                        this.add(it)
+                    }
+                },
+                null
+            )
+        } catch (e: AssertionError) {
             null
-        )
+        }
+
+        if (type === null) return null
 
         if (!type.isHigherOrderCollection(project)) return null
 

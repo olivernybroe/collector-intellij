@@ -12,22 +12,17 @@
 ### Removed
 
 ### Fixed
+- Fixed closure to arrow function on if statements
+- Fixed higher order type provider assertion error
 
 ### Security
 ## [0.3.0]
 ### Added
 - Type provider for higher order collection methods and properties
 
-### Changed
-
-### Deprecated
-
-### Removed
-
 ### Fixed
 - Fixed collect on collection matching non strictly.
 
-### Security
 ## [0.1.0]
 ### Changed
 - Tagged first stable release.

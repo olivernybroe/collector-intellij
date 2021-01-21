@@ -8,9 +8,11 @@ import com.intellij.psi.util.elementType
 import com.jetbrains.php.config.PhpLanguageFeature
 import com.jetbrains.php.lang.inspections.PhpInspection
 import com.jetbrains.php.lang.lexer.PhpTokenTypes
+import com.jetbrains.php.lang.parser.parsing.statements.IfStatement
 import com.jetbrains.php.lang.psi.PhpPsiUtil
 import com.jetbrains.php.lang.psi.elements.Function
 import com.jetbrains.php.lang.psi.elements.GroupStatement
+import com.jetbrains.php.lang.psi.elements.If
 import com.jetbrains.php.lang.psi.elements.MethodReference
 import com.jetbrains.php.lang.psi.elements.ParameterList
 import com.jetbrains.php.lang.psi.elements.PhpUseList
@@ -62,6 +64,11 @@ class ClosureToArrowFunctionInspection : PhpInspection() {
 
                 // And cannot be done on echo call
                 if (body.statements[0].firstChild.elementType === PhpTokenTypes.kwECHO) {
+                    return
+                }
+
+                // And cannot be an if statement.
+                if (body.statements[0] is If) {
                     return
                 }
 

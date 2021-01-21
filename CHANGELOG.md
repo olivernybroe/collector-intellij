@@ -12,6 +12,18 @@
 ### Removed
 
 ### Fixed
+
+### Security
+## [unspecified]
+### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
 - Fixed closure to arrow function on if statements
 - Fixed higher order type provider assertion error
 

@@ -19,7 +19,7 @@ It can also convert normal PHP statements into collections.
 The plugin has no stable version, only manual and EAP is possible.
 
 
-- ~~Using IDE built-in plugin system~~: (no stable release yet)
+- Using IDE built-in plugin system:
 
   <kbd>Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "Collector"</kbd> >
   <kbd>Install Plugin</kbd>
@@ -28,14 +28,6 @@ The plugin has no stable version, only manual and EAP is possible.
 
   Download the [latest release](https://github.com/olivernybroe/collections-intellij/releases/latest) and install it manually using
   <kbd>Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
-
-- Using Early Access Program (EAP) builds:
-
-  <kbd>Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Manage plugin repositories</kbd>
-
-  Add a new entry for [`https://plugins.jetbrains.com/plugins/eap/15246`](https://plugins.jetbrains.com/plugins/eap/15246)
-
-  Then search for the plugin and install it as usual.
 
 ## Configuration
 > :warning: The inspections might be disabled by default! Go to preferences for enabling them.

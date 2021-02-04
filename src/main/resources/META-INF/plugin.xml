@@ -75,6 +75,19 @@
                 implementationClass="dev.nybroe.collector.inspections.WhereFirstInspection"
         />
 
+        <localInspection
+                language="PHP"
+                groupPath="PHP"
+                groupKey="collectionGroupName"
+                shortName="WhereIsNotEmptyInspection"
+                enabledByDefault="true"
+                bundle="messages.MyBundle"
+                key="whereIsNotEmptyDisplayName"
+                implementationClass="dev.nybroe.collector.inspections.WhereIsNotEmptyInspection"
+        />
+
+        <notificationGroup displayType="STICKY_BALLOON" id="Collector"/>
+
         <projectService serviceImplementation="dev.nybroe.collector.services.ChecksInspectionsEnabledService"/>
     </extensions>
 

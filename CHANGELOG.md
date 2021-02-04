@@ -4,8 +4,10 @@
 
 ## [Unreleased]
 ### Added
+- Added `where(...)->isNotEmpty()` to `contains` refactoring
 
 ### Changed
+- Minimum required version is now 2020.3
 
 ### Deprecated
 
@@ -14,20 +16,12 @@
 ### Fixed
 
 ### Security
-## [unspecified]
-### Added
 
-### Changed
-
-### Deprecated
-
-### Removed
-
+## [0.3.1]
 ### Fixed
 - Fixed closure to arrow function on if statements
 - Fixed higher order type provider assertion error
 
-### Security
 ## [0.3.0]
 ### Added
 - Type provider for higher order collection methods and properties

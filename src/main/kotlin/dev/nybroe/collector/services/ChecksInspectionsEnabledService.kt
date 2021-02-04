@@ -4,10 +4,8 @@ import com.intellij.codeInsight.daemon.HighlightDisplayKey
 import com.intellij.codeInspection.InspectionProfile
 import com.intellij.codeInspection.ex.InspectionProfileImpl
 import com.intellij.notification.NotificationAction
-import com.intellij.notification.NotificationDisplayType
-import com.intellij.notification.NotificationGroup
+import com.intellij.notification.NotificationGroupManager
 import com.intellij.notification.NotificationType
-import com.intellij.notification.Notifications
 import com.intellij.openapi.project.Project
 import com.intellij.profile.codeInspection.InspectionProfileManager
 import dev.nybroe.collector.inspections.ArrayMapToCollectionInspection
@@ -25,14 +23,12 @@ class ChecksInspectionsEnabledService(val project: Project) {
         MapFlattenToFlatMapInspection()
     )
 
-    private val notificationGroup = NotificationGroup("Collector", NotificationDisplayType.STICKY_BALLOON, true)
-
     init {
         val profile = InspectionProfileManager.getInstance(project).currentProfile
 
         if (!isCollectionInspectionsEnabled(profile)) {
-            Notifications.Bus.notify(
-                notificationGroup.createNotification(
+            NotificationGroupManager.getInstance().getNotificationGroup("Collector")
+                .createNotification(
                     "Inspections for collector is disabled.",
                     "The inspections can be enabled in preferences or by pressing the button.",
                     NotificationType.INFORMATION
@@ -40,8 +36,7 @@ class ChecksInspectionsEnabledService(val project: Project) {
                     NotificationAction.createSimple(
                         "Enable inspections"
                     ) { enableCollectionInspections(profile) }
-                )
-            )
+                ).notify(project)
         }
     }
 

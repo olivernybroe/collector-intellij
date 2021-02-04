@@ -14,20 +14,12 @@
 ### Fixed
 
 ### Security
-## [unspecified]
+## [0.3.2]
 ### Added
 - Added `where(...)->isNotEmpty()` to `contains` refactoring
 
 ### Changed
 - Minimum required version is now 2020.3
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
 
 ## [0.3.1]
 ### Fixed

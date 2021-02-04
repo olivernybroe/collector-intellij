@@ -5,7 +5,6 @@
         <a href="https://github.com/olivernybroe/collections-intellij"><img alt="GitHub Workflow Status (master)" src="https://github.com/olivernybroe/collections-intellij/workflows/Build/badge.svg"></a>
         <a href="https://plugins.jetbrains.com/plugin/15246"><img alt="Total Downloads" src="https://img.shields.io/jetbrains/plugin/d/15246"></a>
         <a href="https://plugins.jetbrains.com/plugin/15246"><img alt="Latest Version" src="https://img.shields.io/jetbrains/plugin/v/15246"></a>
-	    <a href="https://plugins.jetbrains.com/plugin/15246"><img alt="Latest EAP Version" src="https://img.shields.io/badge/dynamic/xml?label=EAP version&query=%2Fplugin-repository%2Fcategory%2Fidea-plugin%5B1%5D%2Fversion&url=https%3A%2F%2Fplugins.jetbrains.com%2Fplugins%2Flist%3Fchannel%3Deap%26pluginId%3D15246"></a>
     </p>
 </p>
 

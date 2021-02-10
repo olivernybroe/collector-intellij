@@ -9,6 +9,7 @@ import com.jetbrains.php.config.PhpLanguageFeature
 import com.jetbrains.php.lang.inspections.PhpInspection
 import com.jetbrains.php.lang.lexer.PhpTokenTypes
 import com.jetbrains.php.lang.psi.PhpPsiUtil
+import com.jetbrains.php.lang.psi.elements.ControlStatement
 import com.jetbrains.php.lang.psi.elements.Function
 import com.jetbrains.php.lang.psi.elements.GroupStatement
 import com.jetbrains.php.lang.psi.elements.If
@@ -67,7 +68,7 @@ class ClosureToArrowFunctionInspection : PhpInspection() {
                 }
 
                 // And cannot be an if statement.
-                if (body.statements[0] is If) {
+                if (body.statements[0] is ControlStatement) {
                     return
                 }
 

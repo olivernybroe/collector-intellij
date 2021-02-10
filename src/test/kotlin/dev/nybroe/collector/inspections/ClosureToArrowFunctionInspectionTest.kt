@@ -53,4 +53,9 @@ internal class ClosureToArrowFunctionInspectionTest : InspectionTest() {
         PhpProjectConfigurationFacade.getInstance(project).languageLevel = PhpLanguageLevel.PHP740
         doNotMatchTest("if-closure-to-arrow-function")
     }
+
+    fun testClosureWithForeachStatementCannotBeChanged() {
+        PhpProjectConfigurationFacade.getInstance(project).languageLevel = PhpLanguageLevel.PHP740
+        doNotMatchTest("foreach-closure-to-arrow-function")
+    }
 }

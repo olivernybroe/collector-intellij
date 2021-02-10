@@ -12,6 +12,7 @@
 ### Removed
 
 ### Fixed
+- Fixed closure to arrow function on control statements (foreach, if, switch)
 
 ### Security
 ## [0.3.2]

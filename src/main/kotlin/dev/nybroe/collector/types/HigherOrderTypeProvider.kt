@@ -46,6 +46,7 @@ class HigherOrderTypeProvider : PhpTypeProvider4 {
      * @param project well so you can reach the PhpIndex
      * @return null if no match
      */
+    @Suppress("SwallowedException")
     override fun getBySignature(
         expression: String,
         visited: MutableSet<String>,

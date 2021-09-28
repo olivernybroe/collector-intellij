@@ -43,7 +43,7 @@ val Function.isShortArrowFunction: Boolean
     get() = FunctionImpl.isShortArrowFunction(this)
 
 fun PhpType.isCollection(project: Project): Boolean {
-    val filteredType = this.filterMixed()
+    val filteredType = this.filterMixed().filterUnknown()
 
     if (filteredType.isEmpty) {
         return false

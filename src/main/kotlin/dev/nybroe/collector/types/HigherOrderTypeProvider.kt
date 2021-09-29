@@ -46,27 +46,21 @@ class HigherOrderTypeProvider : PhpTypeProvider4 {
      * @param project well so you can reach the PhpIndex
      * @return null if no match
      */
-    @Suppress("SwallowedException")
     override fun getBySignature(
         expression: String,
         visited: MutableSet<String>,
         depth: Int,
         project: Project
     ): MutableCollection<out PhpNamedElement>? {
-        // Decode the expression into a php type
-        val type = try {
-            PhpIndex.getInstance(project).completeType(
-                project,
-                PhpType().apply {
-                    expression.split('|').filter { it.length != 1 }.forEach {
-                        this.add(it)
-                    }
-                },
-                null
-            )
-        } catch (e: AssertionError) {
-            null
-        }
+        // Remove key from signature
+        val signature = expression.removePrefix("#${key}")
+
+        // Resolve type of the signature.
+        val type = PhpIndex.getInstance(project)
+            .getBySignature(signature.split('|')[0])
+            .map { it.type }
+            .reduce { acc, phpType -> acc.add(phpType) }
+            .global(project)
 
         if (type === null) return null
 

@@ -26,7 +26,11 @@ internal class CollectFunctionOnCollectionInspectionTest : InspectionTest() {
         doNotMatchTest("collect_on_iterable_variable")
     }
 
-    fun testCollectOnUnionCollectoinType() {
+    fun testCollectOnUnionCollectionType() {
         doNotMatchTest("collect_on_union_collection_type")
+    }
+
+    fun testCollectionOnStdObject_property() {
+        doNotMatchTest("collect_on_stdClass_property")
     }
 }

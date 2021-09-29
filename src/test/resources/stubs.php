@@ -63,6 +63,10 @@ namespace Illuminate\Support {
 
         }
 
+        public function get($key, $default = null)
+        {
+        }
+
         /**
          * Get the first item by the given key value pair.
          *

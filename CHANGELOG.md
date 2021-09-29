@@ -3,18 +3,13 @@
 # collections-intellij Changelog
 
 ## [Unreleased]
-### Added
+### Fixed
+- Fixed recursive collection on std class
 
-### Changed
-
-### Deprecated
-
-### Removed
-
+## [0.3.2]
 ### Fixed
 - Fixed closure to arrow function on control statements (foreach, if, switch)
 
-### Security
 ## [0.3.2]
 ### Added
 - Added `where(...)->isNotEmpty()` to `contains` refactoring

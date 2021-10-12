@@ -3,6 +3,8 @@
 # collections-intellij Changelog
 
 ## [Unreleased]
+
+## [0.3.5]
 ### Fixed
 - Fixed immutable php type issues
 

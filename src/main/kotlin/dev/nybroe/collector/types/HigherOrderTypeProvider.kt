@@ -58,8 +58,9 @@ class HigherOrderTypeProvider : PhpTypeProvider4 {
         // Resolve type of the signature.
         val type = PhpIndex.getInstance(project)
             .getBySignature(signature.split('|')[0])
-            .map { it.type }
-            .reduceOrNull { acc, phpType -> acc.add(phpType) }
+            .map { PhpType.builder().add(it.type) }
+            .reduceOrNull { acc, phpType -> acc.merge(phpType) }
+            ?.build()
             ?.global(project)
 
         if (type === null) return null

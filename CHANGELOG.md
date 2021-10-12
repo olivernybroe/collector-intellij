@@ -3,6 +3,8 @@
 # collections-intellij Changelog
 
 ## [Unreleased]
+
+## [0.3.4]
 ### Fixed
 - Fixed recursive collection on variables with no types
 - Fix higher order type provider when no types are possible

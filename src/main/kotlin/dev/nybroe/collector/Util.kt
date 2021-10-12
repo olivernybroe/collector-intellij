@@ -56,7 +56,11 @@ fun PhpType.isCollection(project: Project): Boolean {
 }
 
 fun PhpType.isCollectionStrict(project: Project): Boolean {
-    return this.types.all { PhpType().add(it).isCollection(project) }
+    if (this.types.isEmpty()) {
+        return false
+    }
+
+    return this.types.none { !PhpType().add(it).isCollection(project) }
 }
 
 fun PhpType.isHigherOrderCollection(project: Project): Boolean {

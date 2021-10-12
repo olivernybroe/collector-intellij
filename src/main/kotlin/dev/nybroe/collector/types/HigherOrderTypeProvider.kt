@@ -59,8 +59,8 @@ class HigherOrderTypeProvider : PhpTypeProvider4 {
         val type = PhpIndex.getInstance(project)
             .getBySignature(signature.split('|')[0])
             .map { it.type }
-            .reduce { acc, phpType -> acc.add(phpType) }
-            .global(project)
+            .reduceOrNull { acc, phpType -> acc.add(phpType) }
+            ?.global(project)
 
         if (type === null) return null
 

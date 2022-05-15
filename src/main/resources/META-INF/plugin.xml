@@ -92,7 +92,7 @@
     </extensions>
 
     <extensions defaultExtensionNs="com.jetbrains.php">
-        <typeProvider4 implementation="dev.nybroe.collector.types.HigherOrderTypeProvider"/>
+
     </extensions>
 
     <applicationListeners>

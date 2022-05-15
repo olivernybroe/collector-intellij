@@ -3,6 +3,8 @@
 # collections-intellij Changelog
 
 ## [Unreleased]
+
+## [0.4.0]
 ### Removed
 - Removed type provider for higher order collections as it seemed unstable
 

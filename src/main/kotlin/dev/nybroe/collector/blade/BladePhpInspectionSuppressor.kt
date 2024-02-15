@@ -3,6 +3,8 @@ package dev.nybroe.collector.blade
 import com.intellij.codeInspection.InspectionSuppressor
 import com.intellij.codeInspection.SuppressQuickFix
 import com.intellij.psi.PsiElement
+import com.jetbrains.php.blade.parser.BladeCompositeElement
+import com.jetbrains.php.blade.psi.BladePsiDirective
 import com.jetbrains.php.blade.psi.BladePsiDirectiveParameter
 import com.jetbrains.php.blade.psi.BladePsiLanguageInjectionHost
 import com.jetbrains.php.blade.psi.BladePsiPhpBlock
@@ -15,7 +17,7 @@ class BladePhpInspectionSuppressor : InspectionSuppressor {
     }
 
     override fun isSuppressedFor(element: PsiElement, toolId: String): Boolean {
-        if (element !is BladePsiLanguageInjectionHost) {
+        if (element !is BladeCompositeElement) {
             return false
         }
 

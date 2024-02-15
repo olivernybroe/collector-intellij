@@ -47,7 +47,7 @@ class ClosureToArrowFunctionInspection : PhpInspection() {
 
                 // And closure is inside a collection.
                 val methodReference = PhpPsiUtil
-                    .getParentByCondition<ParameterList>(closure, ParameterList.INSTANCEOF)
+                    .getParentByCondition<ParameterList>(closure, true, ParameterList.INSTANCEOF, null)
                     ?.parent as? MethodReference ?: return
 
                 if (!methodReference.isCollectionMethod) {

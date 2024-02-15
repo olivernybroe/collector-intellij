@@ -3,6 +3,11 @@
 # collections-intellij Changelog
 
 ## [Unreleased]
+### Changed
+- Bump dependencies to latest versions
+
+### Fixed
+- Fixed api changes in Blade plugin
 
 ## [0.4.0]
 ### Removed

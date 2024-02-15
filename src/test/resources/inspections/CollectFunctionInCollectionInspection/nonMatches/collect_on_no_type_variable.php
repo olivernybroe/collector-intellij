@@ -2,4 +2,4 @@
 
 function($variable) {
     collect($variable);
-}
+};

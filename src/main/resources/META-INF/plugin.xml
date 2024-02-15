@@ -9,6 +9,7 @@
     <depends optional="true" config-file="blade.xml">com.jetbrains.php.blade</depends>
 
     <extensions defaultExtensionNs="com.intellij">
+        <postStartupActivity implementation="dev.nybroe.collector.listeners.ChecksInspectionsEnabledProjectActivity"/>
         <localInspection
             language="PHP"
             groupPath="PHP"
@@ -94,9 +95,4 @@
     <extensions defaultExtensionNs="com.jetbrains.php">
 
     </extensions>
-
-    <applicationListeners>
-        <listener class="dev.nybroe.collector.listeners.ChecksInspectionsEnabledProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
 </idea-plugin>

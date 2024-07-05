@@ -11,7 +11,7 @@ plugins {
     // Gradle IntelliJ Plugin
     id("org.jetbrains.intellij") version "1.17.4"
     // Gradle Changelog Plugin
-    id("org.jetbrains.changelog") version "2.2.0"
+    id("org.jetbrains.changelog") version "2.2.1"
 }
 
 group = properties("pluginGroup")

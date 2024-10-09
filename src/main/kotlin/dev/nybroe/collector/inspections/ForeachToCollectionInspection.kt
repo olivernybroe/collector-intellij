@@ -13,6 +13,8 @@ class ForeachToCollectionInspection : PhpInspection() {
     override fun buildVisitor(holder: ProblemsHolder, isOnTheFly: Boolean): PsiElementVisitor {
         return object : PhpElementVisitor() {
             override fun visitPhpForeach(foreach: ForeachStatement) {
+                if (!isOnTheFly) return
+
                 holder.registerProblem(
                     foreach,
                     MyBundle.message("foreachToCollectionDescription"),

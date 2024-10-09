@@ -6,6 +6,6 @@ $array = [
     'tree'
 ];
 
-collect($array)->each(<weak_warning descr="Closure can be converted to arrow function">function ($item) {
+collect($array)->each(<caret>function ($item) {
     doAction($item);
-}</weak_warning>);
+});

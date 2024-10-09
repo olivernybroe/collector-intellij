@@ -4,6 +4,12 @@
 
 ## Unreleased
 
+### Fixed
+- Fixed batch mode information level inspections
+
+### Changed
+- Changed closure converter to Information level (can have semantic impact)
+
 ## 0.5.0 - 2024-02-15
 
 ### Changed
@@ -21,10 +27,6 @@
 
 ### Fixed
 - Fixed immutable php type issues
-- Fixed batch mode information level inspections
-
-### Changed
-- Changed closure converter to Information level (can have semantic impact)
 
 ## 0.3.4
 

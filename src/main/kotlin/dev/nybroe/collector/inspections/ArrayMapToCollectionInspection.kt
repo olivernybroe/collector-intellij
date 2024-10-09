@@ -14,6 +14,8 @@ class ArrayMapToCollectionInspection : PhpInspection() {
     override fun buildVisitor(holder: ProblemsHolder, isOnTheFly: Boolean): PsiElementVisitor {
         return object : PhpElementVisitor() {
             override fun visitPhpFunctionCall(reference: FunctionReference) {
+                if (!isOnTheFly) return
+
                 if (!reference.isGlobalFunctionCallWithName("array_map")) {
                     return
                 }

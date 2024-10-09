@@ -25,6 +25,8 @@ class ClosureToArrowFunctionInspection : PhpInspection() {
     override fun buildVisitor(holder: ProblemsHolder, isOnTheFly: Boolean): PsiElementVisitor {
         return object : PhpElementVisitor() {
             override fun visitPhpFunction(closure: Function) {
+                if (!isOnTheFly) return
+
                 // Check that the PHP version supports arrow functions
                 if (!PhpLanguageFeature.ARROW_FUNCTION_SYNTAX.isSupported(closure.project)) {
                     return
@@ -74,7 +76,7 @@ class ClosureToArrowFunctionInspection : PhpInspection() {
                 holder.registerProblem(
                     closure,
                     MyBundle.message("closureToArrowFunctionDescription"),
-                    ProblemHighlightType.WEAK_WARNING,
+                    ProblemHighlightType.INFORMATION,
                     ClosureToArrowFunctionQuickFix()
                 )
             }
